@@ -91,15 +91,13 @@
            PORT LOGO IMAGE
         ========================= */
 
-        .port-logo-image {
+            .port-logo-image {
             display: block;
-            width: 420px;
+            width: 380px;
             max-width: 90%;
             height: auto;
-            margin: 0 auto 45px;
-            mix-blend-mode: screen;
+            margin: 0 auto 50px;
         }
-
 
         /* =========================
            LOGO
