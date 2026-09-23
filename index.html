@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PORT Startup Expo | Coming Soon</title>
+
+    <meta name="description" content="PORT Startup Expo - Connecting startups, innovators, investors and the global entrepreneurial ecosystem. Coming Soon.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.20), transparent 30%),
+                radial-gradient(circle at 85% 80%, rgba(124, 58, 237, 0.18), transparent 30%),
+                #050b18;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .background-grid {
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            padding: 40px 25px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 55px;
+        }
+
+        .logo-mark {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #3b82f6, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 800;
+            margin-right: 14px;
+            box-shadow: 0 10px 35px rgba(59, 130, 246, 0.25);
+        }
+
+        .logo-text {
+            text-align: left;
+        }
+
+        .logo-text strong {
+            display: block;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 11px;
+            color: #94a3b8;
+            letter-spacing: 3px;
+            margin-top: 3px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid rgba(96, 165, 250, 0.35);
+            border-radius: 50px;
+            color: #93c5fd;
+            background: rgba(59, 130, 246, 0.08);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 8vw, 92px);
+            line-height: 0.95;
+            font-weight: 800;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .description {
+            max-width: 680px;
+            margin: 0 auto;
+            color: #a7b3c7;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .divider {
+            width: 70px;
+            height: 3px;
+            margin: 38px auto;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+
+        .message {
+            font-size: 15px;
+            color: #64748b;
+            letter-spacing: 0.5px;
+        }
+
+        .social {
+            margin-top: 45px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .social a {
+            width: 42px;
+            height: 42px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .social a:hover {
+            color: #ffffff;
+            border-color: #60a5fa;
+            background: rgba(59, 130, 246, 0.12);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 22px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: #475569;
+            font-size: 12px;
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            .logo {
+                margin-bottom: 45px;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            footer {
+                position: static;
+                margin-top: 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <main class="container">
+
+        <!-- LOGO / BRAND -->
+        <div class="logo">
+
+            <div class="logo-mark">
+                P
+            </div>
+
+            <div class="logo-text">
+                <strong>PORT</strong>
+                <span>STARTUP EXPO</span>
+            </div>
+
+        </div>
+
+
+        <!-- COMING SOON -->
+
+        <div class="tag">
+            Something New Is Coming
+        </div>
+
+        <h1>
+            Coming <span class="highlight">Soon.</span>
+        </h1>
+
+        <p class="description">
+            A global platform bringing together startups, innovators,
+            investors, industry leaders and the entrepreneurial ecosystem.
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="message">
+            We're building something exciting. Stay tuned.
+        </p>
+       
+
+    </main>
+
+
+    <footer>
+        © 2026 PORT Startup Expo. All rights reserved.
+    </footer>
+
+</body>
+</html>-
