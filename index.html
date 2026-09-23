@@ -15,9 +15,16 @@
             box-sizing: border-box;
         }
 
+        html {
+            width: 100%;
+            min-height: 100%;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
             min-height: 100vh;
+            min-height: 100dvh;
             background:
                 radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.20), transparent 30%),
                 radial-gradient(circle at 85% 80%, rgba(124, 58, 237, 0.18), transparent 30%),
@@ -26,7 +33,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            overflow-x: hidden;
+            position: relative;
         }
 
         .background-grid {
@@ -42,11 +50,15 @@
         .container {
             width: 100%;
             max-width: 1000px;
-            padding: 40px 25px;
+            padding: 40px 25px 90px;
             text-align: center;
             position: relative;
             z-index: 2;
         }
+
+        /* =========================
+           LOGO
+        ========================= */
 
         .logo {
             display: inline-flex;
@@ -58,6 +70,7 @@
         .logo-mark {
             width: 52px;
             height: 52px;
+            min-width: 52px;
             border-radius: 14px;
             background: linear-gradient(135deg, #3b82f6, #7c3aed);
             display: flex;
@@ -87,8 +100,13 @@
             margin-top: 3px;
         }
 
+        /* =========================
+           TAG
+        ========================= */
+
         .tag {
             display: inline-block;
+            max-width: 100%;
             padding: 9px 18px;
             border: 1px solid rgba(96, 165, 250, 0.35);
             border-radius: 50px;
@@ -100,6 +118,10 @@
             text-transform: uppercase;
             margin-bottom: 25px;
         }
+
+        /* =========================
+           MAIN HEADING
+        ========================= */
 
         h1 {
             font-size: clamp(48px, 8vw, 92px);
@@ -116,13 +138,22 @@
             background-clip: text;
         }
 
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
         .description {
+            width: 100%;
             max-width: 680px;
             margin: 0 auto;
             color: #a7b3c7;
             font-size: 18px;
             line-height: 1.7;
         }
+
+        /* =========================
+           DIVIDER
+        ========================= */
 
         .divider {
             width: 70px;
@@ -132,54 +163,43 @@
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
         }
 
+        /* =========================
+           MESSAGE
+        ========================= */
+
         .message {
             font-size: 15px;
             color: #64748b;
             letter-spacing: 0.5px;
         }
 
-        .social {
-            margin-top: 45px;
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        .social a {
-            width: 42px;
-            height: 42px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s ease;
-        }
-
-        .social a:hover {
-            color: #ffffff;
-            border-color: #60a5fa;
-            background: rgba(59, 130, 246, 0.12);
-            transform: translateY(-3px);
-        }
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             position: fixed;
             bottom: 22px;
             left: 0;
             width: 100%;
+            padding: 0 20px;
             text-align: center;
             color: #475569;
             font-size: 12px;
+            z-index: 3;
         }
 
-        @media (max-width: 600px) {
+
+        /* ==================================================
+           TABLET
+           601px - 1024px
+        ================================================== */
+
+        @media (min-width: 601px) and (max-width: 1024px) {
 
             .container {
-                padding: 30px 20px;
+                max-width: 850px;
+                padding: 40px 35px 100px;
             }
 
             .logo {
@@ -187,16 +207,265 @@
             }
 
             h1 {
-                letter-spacing: -2px;
+                font-size: clamp(58px, 9vw, 78px);
+                letter-spacing: -3px;
             }
 
             .description {
-                font-size: 16px;
+                max-width: 620px;
+                font-size: 17px;
+            }
+
+            .divider {
+                margin: 32px auto;
+            }
+        }
+
+
+        /* ==================================================
+           MOBILE
+           Up to 600px
+        ================================================== */
+
+        @media (max-width: 600px) {
+
+            body {
+                min-height: 100dvh;
+                align-items: center;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding: 30px 20px 80px;
+            }
+
+            /* Logo */
+
+            .logo {
+                margin-bottom: 38px;
+            }
+
+            .logo-mark {
+                width: 46px;
+                height: 46px;
+                min-width: 46px;
+                border-radius: 12px;
+                font-size: 22px;
+                margin-right: 11px;
+            }
+
+            .logo-text strong {
+                font-size: 21px;
+            }
+
+            .logo-text span {
+                font-size: 9px;
+                letter-spacing: 2.5px;
+            }
+
+            /* Tag */
+
+            .tag {
+                font-size: 10px;
+                letter-spacing: 1.5px;
+                padding: 8px 14px;
+                margin-bottom: 20px;
+            }
+
+            /* Heading */
+
+            h1 {
+                font-size: clamp(44px, 14vw, 65px);
+                line-height: 0.98;
+                letter-spacing: -2.5px;
+                margin-bottom: 22px;
+            }
+
+            /* Description */
+
+            .description {
+                max-width: 520px;
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            /* Divider */
+
+            .divider {
+                width: 60px;
+                height: 3px;
+                margin: 30px auto;
+            }
+
+            /* Message */
+
+            .message {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            /* Footer */
+
+            footer {
+                position: static;
+                width: 100%;
+                margin-top: 55px;
+                padding: 0 15px 20px;
+                font-size: 11px;
+            }
+        }
+
+
+        /* ==================================================
+           SMALL PHONES
+           Up to 400px
+        ================================================== */
+
+        @media (max-width: 400px) {
+
+            .container {
+                padding: 25px 16px 60px;
+            }
+
+            .logo {
+                margin-bottom: 32px;
+            }
+
+            .logo-mark {
+                width: 42px;
+                height: 42px;
+                min-width: 42px;
+                border-radius: 11px;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+
+            .logo-text strong {
+                font-size: 19px;
+            }
+
+            .logo-text span {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
+
+            .tag {
+                font-size: 9px;
+                letter-spacing: 1.2px;
+                padding: 7px 12px;
+            }
+
+            h1 {
+                font-size: clamp(40px, 14vw, 54px);
+                letter-spacing: -2px;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .divider {
+                margin: 27px auto;
+            }
+
+            .message {
+                font-size: 13px;
+            }
+
+            footer {
+                margin-top: 45px;
+                font-size: 10px;
+            }
+        }
+
+
+        /* ==================================================
+           VERY SMALL PHONES
+           Up to 350px
+        ================================================== */
+
+        @media (max-width: 350px) {
+
+            .container {
+                padding-left: 13px;
+                padding-right: 13px;
+            }
+
+            .logo-mark {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                font-size: 19px;
+            }
+
+            .logo-text strong {
+                font-size: 18px;
+            }
+
+            .logo-text span {
+                font-size: 7px;
+                letter-spacing: 1.7px;
+            }
+
+            .tag {
+                font-size: 8px;
+                letter-spacing: 1px;
+                padding: 7px 10px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .description {
+                font-size: 13px;
+            }
+
+            .message {
+                font-size: 12px;
+            }
+        }
+
+
+        /* ==================================================
+           MOBILE LANDSCAPE
+        ================================================== */
+
+        @media (max-width: 900px) and (orientation: landscape) {
+
+            body {
+                align-items: flex-start;
+            }
+
+            .container {
+                padding-top: 30px;
+                padding-bottom: 50px;
+            }
+
+            .logo {
+                margin-bottom: 25px;
+            }
+
+            h1 {
+                font-size: clamp(42px, 9vw, 65px);
+                margin-bottom: 18px;
+            }
+
+            .description {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .divider {
+                margin: 22px auto;
             }
 
             footer {
                 position: static;
-                margin-top: 45px;
+                margin-top: 35px;
             }
         }
     </style>
@@ -243,7 +512,6 @@
         <p class="message">
             We're building something exciting. Stay tuned.
         </p>
-       
 
     </main>
 
@@ -253,4 +521,4 @@
     </footer>
 
 </body>
-</html>-
+</html>
