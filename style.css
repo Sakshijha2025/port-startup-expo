@@ -93,7 +93,7 @@
 
             .port-logo-image {
             display: block;
-            width: 380px;
+            width: 650px;
             max-width: 90%;
             height: auto;
             margin: 0 auto 50px;
@@ -818,4 +818,16 @@
             }
         }
 
-    
+.stay-tuned-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 13px 32px;
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    border-radius: 50px;
+    background: linear-gradient(135deg, #3b82f6, #6366f1, #8b5cf6);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
+}   
